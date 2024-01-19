@@ -1,5 +1,6 @@
 services:
   - type: web
+    region: frankfurt
     name: zep
     autoDeploy: false
     env: image
@@ -25,6 +26,7 @@ services:
       - key: ZEP_OPENAI_API_KEY
         sync: false
   - type: pserv
+    region: frankfurt
     name: zep-nlp
     autoDeploy: false
     env: image
@@ -33,6 +35,7 @@ services:
 
 databases:
   - name: zep-postgres
+    region: frankfurt
     databaseName: zep
     postgresMajorVersion: 15
     ipAllowList: [] # only allow internal connections
